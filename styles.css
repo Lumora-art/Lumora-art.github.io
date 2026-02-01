@@ -374,3 +374,17 @@ html[data-theme="pencil"] .btn.primary {
 .icon.whatsapp {
   color: #22c55e; /* WhatsApp green */
 }
+
+.icon.facebook {
+  color: #1877f2; /* WhatsApp green */
+}
+
+.icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+}
