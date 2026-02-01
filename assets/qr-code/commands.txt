@@ -22,10 +22,33 @@ qrencode \
 
 magick qr.png -strip qr-clean.png
 
-
+magick logo.jpeg logo.webp
 
 magick qr.png \
-  \( logo.png -resize 16% \) \
+  \( avatar-bg-wht-2.jpeg -resize 12% \) \
   -gravity center \
   -composite qr-logo.png
 
+
+magick qr.png -colorspace sRGB \
+  \( avatar-bg-wht-2.jpeg -resize 12% -colorspace sRGB \) \
+  -gravity center \
+  -compose Over -composite \
+  qr-logo-color.png
+
+
+magick avatar.png -fuzz 5% -transparent white avatar-nobg.png
+
+
+magick qr.png \
+  \( logo2.png -resize 12% \) \
+  -gravity center \
+  -composite qr-logo2.png
+
+magick logo2.png -fuzz 5% -transparent white output.png
+
+magick qr.png -colorspace sRGB \
+  \( avatar-bg-wht.png -resize 12% -colorspace sRGB \) \
+  -gravity center \
+  -compose Over -composite \
+  qr-logo-color-2.png
