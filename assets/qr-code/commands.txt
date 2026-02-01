@@ -48,7 +48,7 @@ magick qr.png \
 magick logo2.png -fuzz 5% -transparent white output.png
 
 magick qr.png -colorspace sRGB \
-  \( avatar-bg-wht.png -resize 12% -colorspace sRGB \) \
+  \( lumora-logo.png -resize 12% -colorspace sRGB \) \
   -gravity center \
   -compose Over -composite \
-  qr-logo-color-2.png
+  qr-logo-color.png
